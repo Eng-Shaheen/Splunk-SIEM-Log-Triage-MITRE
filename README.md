@@ -1,36 +1,48 @@
-# Splunk Log Triage Lab
+# Splunk Log Triage & SSH Brute-Force Detection Lab
 
 ## Overview
-This project simulates a real-world SOC analyst workflow using Splunk SIEM.
-The lab focuses on detecting, investigating, and triaging suspicious authentication activity.
+This project demonstrates hands-on SOC analyst skills using Splunk SIEM to analyze Linux authentication logs. The lab focuses on detecting SSH brute-force activity, investigating attacker IPs, and correlating failed and successful login attempts.
 
-The objective is to demonstrate hands-on experience with SIEM monitoring,
-alert analysis, and incident investigation commonly performed in enterprise SOC environments.
+## Objectives
+- Ingest Linux authentication logs into Splunk
+- Detect failed SSH login attempts
+- Identify attacker IP addresses
+- Correlate failed attempts with successful logins
+- Perform timeline-based investigation
 
-## Lab Scenario
-Multiple authentication attempts are observed from the same source IP.
-The analyst investigates logs to determine whether the activity represents
-a brute-force attack or unauthorized access attempt.
+## Environment
+- SIEM: Splunk Enterprise
+- Log Source: Linux authentication logs
+- Log Types: SSH login events
+- Platform: Kali Linux
 
-## Tools Used
-- Splunk Enterprise
-- Linux
-- Sample authentication logs
-- SIEM search and dashboards
+## Detection Use Cases
+- Multiple failed SSH login attempts
+- Successful login following repeated failures
+- IP-based threat investigation
+- Time-based event correlation
 
-## Workflow
-1. Ingest authentication logs into Splunk
-2. Search and filter suspicious events
-3. Identify repeated failed login attempts
-4. Correlate source IP and user activity
-5. Perform alert triage and investigation
-6. Document findings in an incident report
+## Sample SPL Queries
 
-## SOC Relevance
-- Log monitoring
-- Alert triage
-- Threat investigation
-- Incident documentation
+Failed SSH login detection:
+```spl
+index=main "Failed password"
+```
+IP-based threat investigation:
+```spl
+index=main
+192.168.1.50
+```
 
-## Disclaimer
-This project is for educational and defensive security purposes only.
+## Investigation Summary
+- Multiple failed SSH login attempts were detected from a single IP address.
+- Failed attempts targeted invalid users, indicating brute-force behavior.
+- A successful login was observed after repeated failures.
+- Timeline analysis supports a potential credential compromise scenario.
+
+## Skills Demonstrated
+- SIEM log analysis
+- Security event triage
+- SSH brute-force detection
+- SPL query development
+- Incident investigation workflow
