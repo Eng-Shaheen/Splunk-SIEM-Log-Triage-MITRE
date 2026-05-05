@@ -150,4 +150,8 @@ index=main
 - Security event triage and alert prioritisation  
 - MITRE ATT&CK technique mapping and attack chain analysis  
 - Incident timeline reconstruction  
-- SOC-style investigation documentation and reporting  
+- SOC-style investigation documentation and reporting
+
+---
+
+### Author: Shaheen Bakhsh - Cybersecurity Analyst
