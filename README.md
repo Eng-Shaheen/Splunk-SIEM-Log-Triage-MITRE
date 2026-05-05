@@ -1,9 +1,18 @@
-# 📌 Project Overview
-This project demonstrates SOC analyst capabilities using **Splunk Enterprise** to perform real-world log triage, detect SSH brute-force activity, and map attacker behaviour to the **MITRE ATT&CK framework**.  
+# Splunk SIEM Log Triage & Detection Engineering, MITRE ATT&CK Mapped
 
-The workflow simulates an enterprise-style incident investigation using Linux authentication logs, covering detection logic, SPL query development, alert correlation, and structured incident documentation.  
 
-The focus is on the **full SOC investigation workflow**: from raw log ingestion through threat detection, timeline reconstruction, and MITRE ATT&CK classification, not basic tool usage.
+## 📌 Project Overview
+![Tool: Splunk](https://img.shields.io/badge/Tool-Splunk-black)
+![Framework: MITRE ATT&CK](https://img.shields.io/badge/Framework-MITRE%20ATT%26CK-red)
+![Domain: SOC Operations](https://img.shields.io/badge/Domain-SOC%20Operations-blue)
+![Level: Analyst](https://img.shields.io/badge/Level-Analyst-green)
+
+
+- This project demonstrates SOC analyst capabilities using **Splunk Enterprise** to perform real-world log triage, detect SSH brute-force activity, and map attacker behaviour to the **MITRE ATT&CK framework**.  
+
+- The workflow simulates an enterprise-style incident investigation using Linux authentication logs, covering detection logic, SPL query development, alert correlation, and structured incident documentation.  
+
+- The focus is on the **full SOC investigation workflow**: from raw log ingestion through threat detection, timeline reconstruction, and MITRE ATT&CK classification, not basic tool usage.
 
 ---
 
