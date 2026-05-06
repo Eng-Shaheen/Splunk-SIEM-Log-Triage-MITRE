@@ -125,21 +125,21 @@ index=main
 ---
 ## Screenshots & Observations
 
-### 1. Fake Log Ingestion
+### 1. Log Ingestion & Dataset Overview
 ![Fake Log Ingestion](screenshots/01_fake_log_ingestion.png)  
-**Observation:** Simulated Linux authentication logs were ingested into Splunk successfully. The dataset contains both failed and successful SSH login attempts, providing a realistic environment for SOC-level analysis.
+**Observation:** Simulated Linux SSH authentication logs successfully ingested into Splunk. Dataset contains both failed and successful login events across multiple source IPs providing a realistic enterprise log environment for SOC-level triage.
 
 ### 2. SSH Brute Force Detection (T1110)
 ![SSH Brute Force Detection](screenshots/02_T1110_bruteforce.png)  
-**Observation:** SPL query identifies multiple failed login attempts by source IP. High failure count indicates brute-force attack patterns.
+**Observation:** SPL query identifies multiple failed login attempts grouped by source IP. High failure count from a single external IP confirms automated brute-force behaviour rather than human error clear T1110 indicator.
 
-### 3. Failed to Successful Login Correlation (T1078)
+### 3. Failed to Successful Login Correlation  (T1078)
 ![Valid Account Correlation](screenshots/03_T1078_valid_account.png)  
-**Observation:** Correlating failed and successful logins reveals potential account compromise. SOC analysts can track attacker progression from brute-force to valid authentication.
+**Observation:** Correlation query surfaces IPs present in both failed and successful login events revealing attacker progression from brute-force to valid account access. High-priority escalation indicator mapped to T1078.
 
-### 4. Attack Timeline Investigation
+### 4. Attack Timeline Reconstruction
 ![Attack Timeline](screenshots/04_attack_timeline.png)  
-**Observation:** Timeline visualization shows sequence of login attempts and successful authentication. Supports incident reconstruction and threat analysis.
+**Observation:** Chronological timeline of all authentication events per source IP. Documents initial brute-force phase, escalation point, and moment of successful access, supports full SOC incident reconstruction and reporting.
 
 ---
 
