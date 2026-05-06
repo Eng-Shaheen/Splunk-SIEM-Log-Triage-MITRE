@@ -1,4 +1,4 @@
-# Splunk SIEM Log Triage & Detection Engineering, MITRE ATT&CK Mapped
+# Splunk SIEM Log Triage & Detection Engineering - MITRE ATT&CK Mapped
 
 
 ## 📌 Project Overview
