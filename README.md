@@ -103,26 +103,6 @@ index=main
 | **Escalation recommendation** | Isolate source IP, review account activity, reset compromised credentials |
 
 ---
-
-# 🖼️ Investigation Screenshots
-
-### 1. Log Ingestion & Dataset Overview
-- Simulated Linux SSH authentication logs successfully ingested into Splunk.  
-- Dataset contains both failed and successful login events across multiple source IPs, providing a realistic enterprise log environment for SOC-level triage.  
-
-### 2. SSH Brute Force Detection, T1110
-- SPL query identifies multiple failed login attempts grouped by source IP.  
-- High failure count from single IP confirms automated brute-force behaviour rather than human error.  
-
-### 3. Failed to Successful Login Correlation, T1078
-- Correlation query surfaces IPs present in both failed and successful login events.  
-- Reveals attacker progression from brute-force to valid account access, high-priority escalation indicator.  
-
-### 4. Attack Timeline Reconstruction
-- Chronological timeline of all authentication events.  
-- Documents initial brute-force phase, escalation point, and moment of successful access for SOC reporting.  
-
----
 ## Screenshots & Observations
 
 ### 1. Log Ingestion & Dataset Overview
